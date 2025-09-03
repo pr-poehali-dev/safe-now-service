@@ -64,29 +64,29 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-br from-professional via-professional to-gray-800 text-white py-20 animate-fade-in">
+      <section id="home" className="relative bg-gradient-to-br from-professional via-professional to-gray-800 text-white py-12 md:py-20 animate-fade-in overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <Badge variant="outline" className="text-white border-white">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-4 md:space-y-6 text-center lg:text-left">
+              <Badge variant="outline" className="text-white border-white text-xs md:text-sm">
                 Стартап #1 в персональной безопасности
               </Badge>
-              <h1 className="text-5xl font-bold leading-tight animate-slide-up">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight animate-slide-up">
                 Персональная безопасность как
                 <span className="text-emergency"> Uber</span>
               </h1>
-              <p className="text-xl text-gray-300 animate-slide-up">
+              <p className="text-lg md:text-xl text-gray-300 animate-slide-up">
                 Нажми кнопку SOS в приложении → группа реагирования выезжает за 5-10 минут. 
                 Быстро, прозрачно, по подписке.
               </p>
-              <div className="flex space-x-4 animate-scale-in">
-                <Button className="bg-emergency hover:bg-red-700 text-white px-8 py-3 text-lg">
-                  <Icon name="Play" className="w-5 h-5 mr-2" />
+              <div className="flex flex-col sm:flex-row gap-4 animate-scale-in justify-center lg:justify-start">
+                <Button className="bg-emergency hover:bg-red-700 text-white px-6 md:px-8 py-3 text-base md:text-lg flex-1 sm:flex-none hover-lift animate-pulse-glow">
+                  <Icon name="Play" className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                   Смотреть демо
                 </Button>
                 <Button 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-professional px-8 py-3 text-lg"
+                  className="border-white text-white hover:bg-white hover:text-professional px-6 md:px-8 py-3 text-base md:text-lg flex-1 sm:flex-none"
                   onClick={() => {
                     const link = document.createElement('a');
                     link.href = '/files/safe-now-presentation.pdf';
@@ -94,48 +94,51 @@ const Index = () => {
                     link.click();
                   }}
                 >
-                  <Icon name="Download" className="w-5 h-5 mr-2" />
-                  Скачать презентацию
+                  <Icon name="Download" className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                  <span className="hidden sm:inline">Скачать презентацию</span>
+                  <span className="sm:hidden">Презентация</span>
                 </Button>
               </div>
             </div>
-            <div className="relative animate-scale-in">
-              <img 
-                src="https://cdn.poehali.dev/files/66376597-324b-41fb-80c1-cb577495eac4.png" 
-                alt="Safe Now App - Вход, SOS кнопка и профиль" 
-                className="rounded-2xl shadow-2xl w-full max-w-2xl mx-auto"
-              />
+            <div className="relative animate-scale-in mt-8 lg:mt-0">
+              <div className="overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-r from-gray-800 to-gray-900 p-2">
+                <img 
+                  src="https://cdn.poehali.dev/files/66376597-324b-41fb-80c1-cb577495eac4.png" 
+                  alt="Safe Now App - Вход, SOS кнопка и профиль" 
+                  className="rounded-xl w-full max-w-lg mx-auto animate-float hover:scale-105 transition-transform duration-300"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Key Metrics */}
-      <section className="py-16 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <Card className="text-center border-none shadow-lg animate-fade-in">
-              <CardContent className="pt-6">
-                <div className="text-3xl font-bold text-emergency mb-2">400+ млрд ₽</div>
-                <div className="text-gray-600">Рынок охранных услуг в России</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            <Card className="text-center border-none shadow-lg animate-bounce-in hover:shadow-xl transition-all duration-300 hover-lift">
+              <CardContent className="pt-4 md:pt-6">
+                <div className="text-2xl md:text-3xl font-bold text-emergency mb-2">400+ млрд ₽</div>
+                <div className="text-sm md:text-base text-gray-600">Рынок охранных услуг в России</div>
               </CardContent>
             </Card>
-            <Card className="text-center border-none shadow-lg animate-fade-in">
-              <CardContent className="pt-6">
-                <div className="text-3xl font-bold text-trust mb-2">5-10 мин</div>
-                <div className="text-gray-600">Время прибытия группы реагирования</div>
+            <Card className="text-center border-none shadow-lg animate-fade-in hover:shadow-xl transition-shadow duration-300">
+              <CardContent className="pt-4 md:pt-6">
+                <div className="text-2xl md:text-3xl font-bold text-trust mb-2">5-10 мин</div>
+                <div className="text-sm md:text-base text-gray-600">Время прибытия группы реагирования</div>
               </CardContent>
             </Card>
-            <Card className="text-center border-none shadow-lg animate-fade-in">
-              <CardContent className="pt-6">
-                <div className="text-3xl font-bold text-safety mb-2">10,000</div>
-                <div className="text-gray-600">Целевое количество семей в первый год</div>
+            <Card className="text-center border-none shadow-lg animate-fade-in hover:shadow-xl transition-shadow duration-300">
+              <CardContent className="pt-4 md:pt-6">
+                <div className="text-2xl md:text-3xl font-bold text-safety mb-2">10,000</div>
+                <div className="text-sm md:text-base text-gray-600">Целевое количество семей в первый год</div>
               </CardContent>
             </Card>
-            <Card className="text-center border-none shadow-lg animate-fade-in">
-              <CardContent className="pt-6">
-                <div className="text-3xl font-bold text-emergency mb-2">60+ млн ₽</div>
-                <div className="text-gray-600">Планируемая выручка в год</div>
+            <Card className="text-center border-none shadow-lg animate-fade-in hover:shadow-xl transition-shadow duration-300">
+              <CardContent className="pt-4 md:pt-6">
+                <div className="text-2xl md:text-3xl font-bold text-emergency mb-2">60+ млн ₽</div>
+                <div className="text-sm md:text-base text-gray-600">Планируемая выручка в год</div>
               </CardContent>
             </Card>
           </div>
@@ -261,28 +264,28 @@ const Index = () => {
       </section>
 
       {/* Partners Section */}
-      <section id="partners" className="py-20 bg-gray-50">
+      <section id="partners" className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-professional mb-4">Партнерам</h2>
-            <p className="text-xl text-gray-600">Присоединяйтесь к революции в сфере безопасности</p>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-professional mb-4">Партнерам</h2>
+            <p className="text-lg md:text-xl text-gray-600">Присоединяйтесь к революции в сфере безопасности</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-professional">Возможности для ЧОПов</h3>
-              <ul className="space-y-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start lg:items-center">
+            <div className="space-y-4 md:space-y-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-professional">Возможности для ЧОПов</h3>
+              <ul className="space-y-3 md:space-y-4">
                 <li className="flex items-start space-x-3">
-                  <Icon name="CheckCircle" className="w-6 h-6 text-safety mt-0.5" />
-                  <span className="text-gray-700">Увеличение загрузки экипажей на 40-60%</span>
+                  <Icon name="CheckCircle" className="w-5 h-5 md:w-6 md:h-6 text-safety mt-0.5 flex-shrink-0" />
+                  <span className="text-sm md:text-base text-gray-700">Увеличение загрузки экипажей на 40-60%</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <Icon name="CheckCircle" className="w-6 h-6 text-safety mt-0.5" />
-                  <span className="text-gray-700">Автоматическое распределение заказов</span>
+                  <Icon name="CheckCircle" className="w-5 h-5 md:w-6 md:h-6 text-safety mt-0.5 flex-shrink-0" />
+                  <span className="text-sm md:text-base text-gray-700">Автоматическое распределение заказов</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <Icon name="CheckCircle" className="w-6 h-6 text-safety mt-0.5" />
-                  <span className="text-gray-700">Прозрачная система расчетов</span>
+                  <Icon name="CheckCircle" className="w-5 h-5 md:w-6 md:h-6 text-safety mt-0.5 flex-shrink-0" />
+                  <span className="text-sm md:text-base text-gray-700">Прозрачная система расчетов</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Icon name="CheckCircle" className="w-6 h-6 text-safety mt-0.5" />
@@ -335,21 +338,21 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-professional text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-8">Свяжитесь с нами</h2>
-          <p className="text-xl mb-12">Готовы обсудить инвестиции или партнерство?</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">Свяжитесь с нами</h2>
+          <p className="text-lg md:text-xl mb-8 md:mb-12">Готовы обсудить инвестиции или партнерство?</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="flex flex-col items-center space-y-3">
-              <Icon name="Mail" className="w-8 h-8 text-emergency" />
-              <span className="text-lg">hello@safenow.ru</span>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+            <div className="flex flex-col items-center space-y-3 animate-slide-in-bottom hover-lift">
+              <Icon name="Mail" className="w-6 h-6 md:w-8 md:h-8 text-emergency" />
+              <span className="text-base md:text-lg">hello@safenow.ru</span>
             </div>
-            <div className="flex flex-col items-center space-y-3">
-              <Icon name="Phone" className="w-8 h-8 text-emergency" />
-              <span className="text-lg">+7 (495) 123-45-67</span>
+            <div className="flex flex-col items-center space-y-3 animate-slide-in-bottom hover-lift" style={{animationDelay: '0.2s'}}>
+              <Icon name="Phone" className="w-6 h-6 md:w-8 md:h-8 text-emergency" />
+              <span className="text-base md:text-lg">+7 (495) 123-45-67</span>
             </div>
-            <div className="flex flex-col items-center space-y-3">
-              <Icon name="MapPin" className="w-8 h-8 text-emergency" />
-              <span className="text-lg">Москва, Россия</span>
+            <div className="flex flex-col items-center space-y-3 animate-slide-in-bottom hover-lift" style={{animationDelay: '0.4s'}}>
+              <Icon name="MapPin" className="w-6 h-6 md:w-8 md:h-8 text-emergency" />
+              <span className="text-base md:text-lg">Москва, Россия</span>
             </div>
           </div>
           
