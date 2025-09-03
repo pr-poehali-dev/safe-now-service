@@ -84,7 +84,17 @@ const Index = () => {
                   <Icon name="Play" className="w-5 h-5 mr-2" />
                   Смотреть демо
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-professional px-8 py-3 text-lg">
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-professional px-8 py-3 text-lg"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/files/safe-now-presentation.pdf';
+                    link.download = 'Safe Now - Презентация.pdf';
+                    link.click();
+                  }}
+                >
+                  <Icon name="Download" className="w-5 h-5 mr-2" />
                   Скачать презентацию
                 </Button>
               </div>
@@ -279,7 +289,16 @@ const Index = () => {
                   <span className="text-gray-700">Новый поток клиентов</span>
                 </li>
               </ul>
-              <Button className="bg-trust hover:bg-blue-700 text-white px-8 py-3 text-lg">
+              <Button 
+                className="bg-trust hover:bg-blue-700 text-white px-8 py-3 text-lg"
+                onClick={() => {
+                  const contactSection = document.querySelector('#contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                <Icon name="Users" className="w-5 h-5 mr-2" />
                 Стать партнером
               </Button>
             </div>
