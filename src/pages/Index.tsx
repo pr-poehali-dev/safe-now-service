@@ -90,11 +90,28 @@ const Index = () => {
               </div>
             </div>
             <div className="relative animate-scale-in">
-              <img 
-                src="/img/2602f9f4-6852-4f81-a528-c43fad8c30c6.jpg" 
-                alt="Safe Now App Interface" 
-                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
-              />
+              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+                <img 
+                  src="https://cdn.poehali.dev/files/8d7679fb-fc98-431a-bce3-bf7ab0cd83df.png" 
+                  alt="Safe Now Login Screen" 
+                  className="rounded-2xl shadow-2xl w-full"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/1c336fe0-4f8b-4a5e-8d5e-7ed8533e9c42.png" 
+                  alt="Safe Now Profile Menu" 
+                  className="rounded-2xl shadow-2xl w-full"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/189cc194-4005-4efe-8c3a-e4d5468e8055.png" 
+                  alt="Safe Now Navigation Map" 
+                  className="rounded-2xl shadow-2xl w-full"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/318fecd1-ceb1-4424-bcd2-412765c744bc.png" 
+                  alt="Safe Now Route Tracking" 
+                  className="rounded-2xl shadow-2xl w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
